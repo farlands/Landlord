@@ -10,7 +10,7 @@ import com.jcdesimp.landlord.persistantData.*;
 import com.jcdesimp.landlord.pluginHooks.VaultHandler;
 import com.jcdesimp.landlord.pluginHooks.WorldguardHandler;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
-import net.milkbowl.vault.Vault;
+//import net.milkbowl.vault.Vault;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -234,7 +234,10 @@ public final class Landlord extends JavaPlugin {
 
 
         // WorldGuard may not be loaded
-        return !(plugin == null || !(plugin instanceof Vault) || !this.getConfig().getBoolean("economy.enable", true));
+
+        //TODO rebase Vault onto its API
+        //return !(plugin == null || !(plugin instanceof Vault) || !this.getConfig().getBoolean("economy.enable", true));
+        return plugin != null;
 
     }
 

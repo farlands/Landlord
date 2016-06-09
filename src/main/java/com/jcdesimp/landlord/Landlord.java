@@ -90,9 +90,9 @@ public final class Landlord extends JavaPlugin {
 
         //Worldguard Check
         if (!hasWorldGuardEnabled() && this.getConfig().getBoolean("worldguard.prohibitRegionClaim", true)) {
-            getLogger().warning("Worldguard not found, worldguard features disabled.");
+            getLogger().warning("WorldGuard not found, WorldGuard features disabled.");
         } else if (hasWorldGuardEnabled()) {
-            getLogger().info("Worldguard found!");
+            getLogger().info("WorldGuard found!");
             wgHandler = new WorldGuardHandler(getWorldGuard());
         }
 
@@ -182,7 +182,7 @@ public final class Landlord extends JavaPlugin {
 
     /*
      * **************
-     *   Worldguard
+     *   WorldGuard
      * **************
      */
     private WorldGuardPlugin getWorldGuard() {

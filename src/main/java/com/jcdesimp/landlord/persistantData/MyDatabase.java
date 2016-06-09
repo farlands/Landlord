@@ -56,7 +56,7 @@ public abstract class MyDatabase {
             throw new RuntimeException("Failed to retrieve the ClassLoader of the plugin using Reflection", ex);
         }
     }
-
+    //todo create a command to rebuild database as an alternative to toggling the config
     /**
      * Initialize the database using the passed arguments
      *

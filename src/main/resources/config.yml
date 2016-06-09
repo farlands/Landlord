@@ -49,6 +49,13 @@
 #    useContainers: true
 #    useRedstone: true
 #    pvp: true
+# Here you can choose to offsite the plugin data to a different database
+# database:
+#    external: false
+#    driver:
+#    location:
+#    username:
+#    password:
 # Here you can disable worlds where player should not claim/unclaim
 # disabled-worlds:
 # - world_nether
@@ -84,6 +91,12 @@ enabled-flags:
   useContainers: true
   useRedstone: true
   pvp: true
+database:
+  external: false
+  driver:
+  location:
+  username:
+  password:
 disabled-worlds:
 - world_nether
 - world_the_end

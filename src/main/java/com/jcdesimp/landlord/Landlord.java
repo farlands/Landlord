@@ -89,9 +89,9 @@ public final class Landlord extends JavaPlugin {
         getCommand("landlord").setExecutor(new LandlordCommandExecutor(this));
 
         //Worldguard Check
-        if (!hasWorldGuard() && this.getConfig().getBoolean("worldguard.prohibitRegionClaim", true)) {
+        if (!hasWorldGuardEnabled() && this.getConfig().getBoolean("worldguard.prohibitRegionClaim", true)) {
             getLogger().warning("Worldguard not found, worldguard features disabled.");
-        } else if (hasWorldGuard()) {
+        } else if (hasWorldGuardEnabled()) {
             getLogger().info("Worldguard found!");
             wgHandler = new WorldguardHandler(getWorldGuard());
         }
@@ -206,7 +206,7 @@ public final class Landlord extends JavaPlugin {
         return wgHandler;
     }
 
-    public boolean hasWorldGuard() {
+    public boolean hasWorldGuardEnabled() {
         Plugin plugin = getServer().getPluginManager().getPlugin("WorldGuard");
 
         //System.out.println("-------- " + plugin.toString());

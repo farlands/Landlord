@@ -80,7 +80,7 @@ public class Claim implements LandlordCommand {
             // Check if worldguard is installed
             if (plugin.hasWorldGuardEnabled()) {
                 // if it is make sure that the attempted land claim isn't with a protected worldguard region.
-                if (!plugin.getWgHandler().canClaim(player, currChunk)) {
+                if (!plugin.getWGHandler().canClaim(player, currChunk)) {
                     player.sendMessage(ChatColor.RED + noClaimZone);
                     return true;
                 }

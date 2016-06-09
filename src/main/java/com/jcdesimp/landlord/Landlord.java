@@ -8,7 +8,7 @@ import com.jcdesimp.landlord.landManagement.ViewManager;
 import com.jcdesimp.landlord.landMap.MapManager;
 import com.jcdesimp.landlord.persistantData.*;
 import com.jcdesimp.landlord.pluginHooks.VaultHandler;
-import com.jcdesimp.landlord.pluginHooks.WorldguardHandler;
+import com.jcdesimp.landlord.pluginHooks.WorldGuardHandler;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 //import net.milkbowl.vault.Vault;
 import org.bukkit.Bukkit;
@@ -34,7 +34,7 @@ public final class Landlord extends JavaPlugin {
     private MyDatabase database;
     private Landlord plugin;
     private MapManager mapManager;
-    private WorldguardHandler wgHandler;
+    private WorldGuardHandler wgHandler;
     private VaultHandler vHandler;
     private FlagManager flagManager;
     private ViewManager manageViewManager;
@@ -93,7 +93,7 @@ public final class Landlord extends JavaPlugin {
             getLogger().warning("Worldguard not found, worldguard features disabled.");
         } else if (hasWorldGuardEnabled()) {
             getLogger().info("Worldguard found!");
-            wgHandler = new WorldguardHandler(getWorldGuard());
+            wgHandler = new WorldGuardHandler(getWorldGuard());
         }
 
         //Vault Check
@@ -202,7 +202,7 @@ public final class Landlord extends JavaPlugin {
      *
      * @return ll wg handler
      */
-    public WorldguardHandler getWgHandler() {
+    public WorldGuardHandler getWGHandler() {
         return wgHandler;
     }
 

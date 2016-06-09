@@ -16,7 +16,7 @@ import static com.sk89q.worldguard.bukkit.BukkitUtil.toVector;
  * File created by jcdesimp on 3/15/14.
  * Class for handling worldguard interactions
  */
-public class WorldguardHandler {
+public class WorldGuardHandler {
     WorldGuardPlugin worldguard;
 
 
@@ -25,7 +25,7 @@ public class WorldguardHandler {
      *
      * @param worldguard plugin instance
      */
-    public WorldguardHandler(WorldGuardPlugin worldguard) {
+    public WorldGuardHandler(WorldGuardPlugin worldguard) {
         this.worldguard = worldguard;
     }
 

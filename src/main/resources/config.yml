@@ -75,7 +75,7 @@ economy:
   buyPrice: 100
   sellPrice: 50
 worldguard:
-  blockRegionClaim: true
+  prohibitRegionClaim: true
 enabled-flags:
   build: true
   harmAnimals: true
